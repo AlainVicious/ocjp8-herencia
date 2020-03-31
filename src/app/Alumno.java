@@ -9,7 +9,7 @@ public class Alumno extends Persona{
     private String carrera;
 
     public Alumno(String nombre, int edad, String sexo){
-        this(nombre, edad, sexo, "NA", "NA", "NA", "NA", "NA");
+        this(nombre, edad, sexo, "NA", "NA", "NA");
     }
 
     public Alumno(String nombre, int edad, String sexo,
@@ -51,14 +51,24 @@ public class Alumno extends Persona{
         this.carrera = carrera;
     }
 
+    /**
+     * edad que tiene en el colegio
+     */
+    public int getEdad(){
+        return 0;
+    }
+
     @Override
     public String toString() {
         String str = "Alumno"
                         + "\n\tmatricula:" + matricula
                         + "\n\tgrupo:" + grupo
                         + "\n\tcarrera:" + carrera
-                        + "\n\tnombre:" + super.getNombre()
-                        + "\n\tedad: " + super.getEdad()
+                        + "\n\tnombre:" + getNombre()
+
+                        + "\n\tedad como alumno: " + this.getEdad()
+                        + "\n\tedad como persona: " + super.getEdad()
+
                         + "\n\tsexo: " + getSexo()
                         + "\n\tnacionalidad: " + getNacionalidad()
                         + "\n\tCURP: "+ getCurp();

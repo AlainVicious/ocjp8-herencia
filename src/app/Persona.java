@@ -34,6 +34,10 @@ public class Persona {
         this.nombre = nombre;
     }
 
+    /**
+     * edad como persona
+     * @return
+     */
     public int getEdad() {
         return edad;
     }
